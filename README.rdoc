@@ -13,7 +13,6 @@ This installs the following gems:
 
     minitest
     minitest-rails
-    minitest-capybara
     capybara
 
 == Configure

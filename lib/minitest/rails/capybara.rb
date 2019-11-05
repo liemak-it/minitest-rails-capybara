@@ -1,6 +1,6 @@
 require "minitest/rails"
 # Load minitest-capybara and minitest-matchers
-require "minitest-capybara"
+require "capybara/minitest"
 require "capybara/rails"
 require "minitest/metadata"
 
@@ -16,8 +16,8 @@ module Capybara
     end
     class TestCase < ::ActiveSupport::TestCase
       include Capybara::DSL
-      include Capybara::Assertions
-      include Minitest::Metadata
+      include Capybara::Minitest::Assertions
+      include ::Minitest::Metadata
 
       # Register by name
       register_spec_type(/(Feature|Browser)( ?Test)?\z/i, self)
